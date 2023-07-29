@@ -1,0 +1,1205 @@
+example/bg_lib.c:889:31: portability: Casting between signed int * and double * which have an incompatible binary data representation. [invalidPointerCast]
+            AddFloat(&buf_p, *(double*)arg, width, prec);
+                              ^
+example/bg_lib.c:944:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            *(float*)*arg = _atof(&buffer);
+             ^
+example/bg_lib.c:510:9: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int c;
+        ^
+example/bg_lib.c:560:17: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int         c;
+                ^
+lcc/cpp/eval.c:219:7: style: The scope of the variable 'rv1' can be reduced. [variableScope]
+ long rv1, rv2;
+      ^
+lcc/cpp/eval.c:220:13: style: The scope of the variable 'oper' can be reduced. [variableScope]
+ int rtype, oper;
+            ^
+lcc/cpp/macro.c:31:7: style: The scope of the variable 'narg' can be reduced. [variableScope]
+  int narg = 0;
+      ^
+lcc/cpp/macro.c:135:9: style: The scope of the variable 'np' can be reduced. [variableScope]
+ Nlist *np;
+        ^
+lcc/cpp/macro.c:181:19: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int ntokc, narg, i;
+                  ^
+lcc/cpp/macro.c:427:9: style: The scope of the variable 'instring' can be reduced. [variableScope]
+ int i, instring;
+        ^
+lcc/cpp/nlist.c:52:9: style: Local variable 'np' shadows outer variable [shadowVariable]
+ Nlist *np;
+        ^
+lcc/cpp/nlist.c:46:9: note: Shadowed declaration
+Nlist  *np;
+        ^
+lcc/cpp/nlist.c:52:9: note: Shadow variable
+ Nlist *np;
+        ^
+lcc/cpp/nlist.c:76:9: style: Local variable 'np' shadows outer variable [shadowVariable]
+ Nlist *np;
+        ^
+lcc/cpp/nlist.c:46:9: note: Shadowed declaration
+Nlist  *np;
+        ^
+lcc/cpp/nlist.c:76:9: note: Shadow variable
+ Nlist *np;
+        ^
+lcc/cpp/tokens.c:293:6: style: The scope of the variable 'len' can be reduced. [variableScope]
+ int len;
+     ^
+lcc/cpp/tokens.c:294:9: style: The scope of the variable 'p' can be reduced. [variableScope]
+ uchar *p;
+        ^
+lcc/cpp/unix.c:118:7: style: Checking if unsigned expression 'n' is less than zero. [unsignedLessThanZero]
+ if (n<=0)
+      ^
+lcc/etc/lcc.c:333:4: error: Common realloc mistake: 'argv' nulled but not freed upon failure [memleakOnRealloc]
+   argv = realloc(argv, argc*sizeof *argv);
+   ^
+lcc/etc/lcc.c:322:16: warning: Either the condition 'argv==NULL' is redundant or there is possible null pointer dereference: argv. [nullPointerRedundantCheck]
+ static char **argv;
+               ^
+lcc/etc/lcc.c:330:12: note: Assuming that condition 'argv==NULL' is not redundant
+  if (argv == NULL)
+           ^
+lcc/etc/lcc.c:322:16: note: Null pointer dereference
+ static char **argv;
+               ^
+lcc/etc/lcc.c:324:8: style: The scope of the variable 'executable' can be reduced. [variableScope]
+ char *executable;
+       ^
+lcc/etc/lcc.c:467:15: style: The scope of the variable 'stemp' can be reduced. [variableScope]
+ static char *stemp, *itemp;
+              ^
+lcc/etc/lcc.c:618:9: style: Argument 'n=100' to function exit is always 100. It does not matter what value 'n' has. [knownArgument]
+ exit(n = 100);
+        ^
+lcc/etc/lcc.c:97:0: information: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if (signal(SIGHUP, SIG_IGN) != SIG_IGN)
+^
+lcc/etc/lcc.c:98:0: information: Skipping configuration 'SIGHUP' since the value of 'SIGHUP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  signal(SIGHUP, interrupt);
+^
+lcc/etc/lcc.c:227:28: warning: Either the condition 'string==NULL' is redundant or there is possible null pointer dereference: string. [nullPointerRedundantCheck]
+ int stringLength = strlen(string);
+                           ^
+lcc/etc/lcc.c:232:13: note: Assuming that condition 'string==NULL' is not redundant
+ if (string == NULL)
+            ^
+lcc/etc/lcc.c:227:28: note: Null pointer dereference
+ int stringLength = strlen(string);
+                           ^
+lcc/lburg/gram.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 30 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+* yacc.c:358  *:827:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+
+    ^
+* yacc.c:358  *:827:11: style: Variable 'yymsg' is assigned a value that is never used. [unreadVariable]
+
+          ^
+* yacc.c:358  *:938:0: information: Skipping configuration 'EXIT_SUCCESS;_ALLOCA_H;YYSTACK_USE_ALLOCA;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+* yacc.c:358  *:938:0: information: Skipping configuration 'YYSTACK_USE_ALLOCA;_AIX;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+* yacc.c:358  *:938:0: information: Skipping configuration 'YYSTACK_USE_ALLOCA;_MSC_VER;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+* yacc.c:358  *:938:0: information: Skipping configuration 'YYSTACK_USE_ALLOCA;__BUILTIN_VA_ARG_INCR;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+* yacc.c:358  *:938:0: information: Skipping configuration 'YYSTACK_USE_ALLOCA;__GNUC__;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+* yacc.c:358  *:938:0: information: Skipping configuration 'YYSTACK_USE_ALLOCA;yyoverflow' since the value of 'yyoverflow' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+
+^
+lcc/lburg/lburg.c:433:14: warning: Either the condition 'r->pattern->left' is redundant or there is possible null pointer dereference: t. [nullPointerRedundantCheck]
+ Nonterm p = t->op;
+             ^
+lcc/lburg/lburg.c:378:45: note: Assuming that condition 'r->pattern->left' is not redundant
+   if (r->pattern->nterms == 2 && r->pattern->left
+                                            ^
+lcc/lburg/lburg.c:382:23: note: Calling function 'emitcost', 1st argument 'r->pattern->left' value is 0
+   emitcost(r->pattern->left, "LEFT_CHILD(a)");
+                      ^
+lcc/lburg/lburg.c:433:14: note: Null pointer dereference
+ Nonterm p = t->op;
+             ^
+lcc/lburg/lburg.c:42:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c, i;
+     ^
+lcc/lburg/lburg.c:212:17: style:inconclusive: Function 'tree' argument 1 names different: declaration 'op' definition 'id'. [funcArgNamesDifferent]
+Tree tree(char *id, Tree left, Tree right) {
+                ^
+lcc/lburg/lburg.h:39:24: note: Function 'tree' argument 1 names different: declaration 'op' definition 'id'.
+extern Tree tree(char *op, Tree left, Tree right);
+                       ^
+lcc/lburg/lburg.c:212:17: note: Function 'tree' argument 1 names different: declaration 'op' definition 'id'.
+Tree tree(char *id, Tree left, Tree right) {
+                ^
+lcc/lburg/lburg.c:268:11: style: Local variable 'p' shadows outer variable [shadowVariable]
+  Nonterm p = pattern->op;
+          ^
+lcc/lburg/lburg.c:246:7: note: Shadowed declaration
+ Term p = pattern->op;
+      ^
+lcc/lburg/lburg.c:268:11: note: Shadow variable
+  Nonterm p = pattern->op;
+          ^
+lcc/lburg/lburg.c:546:13: style: Local variable 'nts' shadows outer variable [shadowVariable]
+ int i, j, *nts = alloc((nrules + 1)*sizeof *nts);
+            ^
+lcc/lburg/lburg.c:17:16: note: Shadowed declaration
+static Nonterm nts;
+               ^
+lcc/lburg/lburg.c:546:13: note: Shadow variable
+ int i, j, *nts = alloc((nrules + 1)*sizeof *nts);
+            ^
+lcc/src/alloc.c:8:7: style: union member 'align::l' is never used. [unusedStructMember]
+ long l;
+      ^
+lcc/src/alloc.c:9:8: style: union member 'align::p' is never used. [unusedStructMember]
+ char *p;
+       ^
+lcc/src/alloc.c:10:9: style: union member 'align::d' is never used. [unusedStructMember]
+ double d;
+        ^
+lcc/src/alloc.c:11:8: style: union member 'align::f' is never used. [unusedStructMember]
+ int (*f)(void);
+       ^
+lcc/src/alloc.c:4:8: style: struct member 'block::limit' is never used. [unusedStructMember]
+ char *limit;
+       ^
+lcc/src/alloc.c:5:8: style: struct member 'block::avail' is never used. [unusedStructMember]
+ char *avail;
+       ^
+lcc/src/bytecode.c:48:26: warning: The address of local variable 'd' might be accessed at non-zero index. [objectIndex]
+   print("byte 4 %u\n", p[swap]);
+                         ^
+lcc/src/bytecode.c:47:30: note: Address of variable taken here.
+   unsigned *p = (unsigned *)&v.d;
+                             ^
+lcc/src/bytecode.c:48:26: note: The address of local variable 'd' might be accessed at non-zero index.
+   print("byte 4 %u\n", p[swap]);
+                         ^
+lcc/src/bytecode.c:49:26: warning: The address of local variable 'd' might be accessed at non-zero index. [objectIndex]
+   print("byte 4 %u\n", p[1 - swap]);
+                         ^
+lcc/src/bytecode.c:47:30: note: Address of variable taken here.
+   unsigned *p = (unsigned *)&v.d;
+                             ^
+lcc/src/bytecode.c:49:26: note: The address of local variable 'd' might be accessed at non-zero index.
+   print("byte 4 %u\n", p[1 - swap]);
+                         ^
+lcc/src/bytecode.c:47:18: portability: Casting from double * to unsigned int * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+   unsigned *p = (unsigned *)&v.d;
+                 ^
+lcc/src/bytecode.c:274:7: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int  c;
+      ^
+lcc/src/bytecode.c:253:7: style: Local variable 'length' shadows outer function [shadowFunction]
+ int  length;
+      ^
+lcc/src/c.h:632:13: note: Shadowed declaration
+extern int  length(List list);
+            ^
+lcc/src/bytecode.c:253:7: note: Shadow variable
+ int  length;
+      ^
+lcc/src/dag.c:38:16: style:inconclusive: Function 'walk' argument 1 names different: declaration 'e' definition 'tp'. [funcArgNamesDifferent]
+void walk(Tree tp, int tlab, int flab) {
+               ^
+lcc/src/c.h:557:23: note: Function 'walk' argument 1 names different: declaration 'e' definition 'tp'.
+extern void walk(Tree e, int tlab, int flab);
+                      ^
+lcc/src/dag.c:38:16: note: Function 'walk' argument 1 names different: declaration 'e' definition 'tp'.
+void walk(Tree tp, int tlab, int flab) {
+               ^
+lcc/src/dag.c:79:27: style:inconclusive: Function 'newnode' argument 2 names different: declaration 'left' definition 'l'. [funcArgNamesDifferent]
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                          ^
+lcc/src/c.h:559:34: note: Function 'newnode' argument 2 names different: declaration 'left' definition 'l'.
+extern Node newnode(int op, Node left, Node right, Symbol p);
+                                 ^
+lcc/src/dag.c:79:27: note: Function 'newnode' argument 2 names different: declaration 'left' definition 'l'.
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                          ^
+lcc/src/dag.c:79:35: style:inconclusive: Function 'newnode' argument 3 names different: declaration 'right' definition 'r'. [funcArgNamesDifferent]
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                                  ^
+lcc/src/c.h:559:45: note: Function 'newnode' argument 3 names different: declaration 'right' definition 'r'.
+extern Node newnode(int op, Node left, Node right, Symbol p);
+                                            ^
+lcc/src/dag.c:79:35: note: Function 'newnode' argument 3 names different: declaration 'right' definition 'r'.
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                                  ^
+lcc/src/dag.c:79:45: style:inconclusive: Function 'newnode' argument 4 names different: declaration 'p' definition 'sym'. [funcArgNamesDifferent]
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                                            ^
+lcc/src/c.h:559:59: note: Function 'newnode' argument 4 names different: declaration 'p' definition 'sym'.
+extern Node newnode(int op, Node left, Node right, Symbol p);
+                                                          ^
+lcc/src/dag.c:79:45: note: Function 'newnode' argument 4 names different: declaration 'p' definition 'sym'.
+Node newnode(int op, Node l, Node r, Symbol sym) {
+                                            ^
+lcc/src/dag.c:101:21: style:inconclusive: Function 'listnodes' argument 1 names different: declaration 'e' definition 'tp'. [funcArgNamesDifferent]
+Node listnodes(Tree tp, int tlab, int flab) {
+                    ^
+lcc/src/c.h:558:28: note: Function 'listnodes' argument 1 names different: declaration 'e' definition 'tp'.
+extern Node listnodes(Tree e, int tlab, int flab);
+                           ^
+lcc/src/dag.c:101:21: note: Function 'listnodes' argument 1 names different: declaration 'e' definition 'tp'.
+Node listnodes(Tree tp, int tlab, int flab) {
+                    ^
+lcc/src/dag.c:41:8: style: Local variable 'list' shadows outer function [shadowFunction]
+  Node list = forest->link;
+       ^
+lcc/src/dag.c:27:13: note: Shadowed declaration
+static void list(Node);
+            ^
+lcc/src/dag.c:41:8: note: Shadow variable
+  Node list = forest->link;
+       ^
+lcc/src/dag.c:419:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/dag.c:419:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/dag.c:496:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/dag.c:496:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/dag.c:589:11: style: Local variable 'tail' shadows outer variable [shadowVariable]
+ Node p, *tail = &forest;
+          ^
+lcc/src/dag.c:17:14: note: Shadowed declaration
+static Node *tail;
+             ^
+lcc/src/dag.c:589:11: note: Shadow variable
+ Node p, *tail = &forest;
+          ^
+lcc/src/dag.c:533:34: warning: Found suspicious operator ',' [constStatement]
+             assert(k < LONG_MAX),
+                                 ^
+lcc/src/dagcheck.c:845:2: warning: Either the condition '!a' is redundant or there is possible null pointer dereference: a. [nullPointerRedundantCheck]
+ STATE_LABEL(a) = p = allocate(sizeof *p, FUNC);
+ ^
+lcc/src/dagcheck.c:843:6: note: Assuming that condition '!a' is not redundant
+ if (!a)
+     ^
+lcc/src/dagcheck.c:845:2: note: Null pointer dereference
+ STATE_LABEL(a) = p = allocate(sizeof *p, FUNC);
+ ^
+lcc/src/decl.c:124:13: style: Condition 'sign==UNSIGNED' is always false [knownConditionTrueFalse]
+  ty = sign == UNSIGNED ? unsignedchar : signedchar;
+            ^
+lcc/src/decl.c:123:22: note: Assuming condition 'sign' is true
+ if (type == CHAR && sign)
+                     ^
+lcc/src/decl.c:124:13: note: Condition 'sign==UNSIGNED' is always false
+  ty = sign == UNSIGNED ? unsignedchar : signedchar;
+            ^
+lcc/src/decl.c:693:10: style: Local variable 'ty' shadows outer argument [shadowArgument]
+    Type ty = unqual(proto[i]);
+         ^
+lcc/src/decl.c:656:49: note: Shadowed declaration
+static void funcdefn(int sclass, char *id, Type ty, Symbol params[], Coordinate pt) {
+                                                ^
+lcc/src/decl.c:693:10: note: Shadow variable
+    Type ty = unqual(proto[i]);
+         ^
+lcc/src/decl.c:771:8: style: Local variable 'cp' shadows outer variable [shadowVariable]
+  Code cp;
+       ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/decl.c:771:8: note: Shadow variable
+  Code cp;
+       ^
+lcc/src/decl.c:836:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/decl.c:836:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/decl.c:1001:9: style: Local variable 'ty' shadows outer argument [shadowArgument]
+   Type ty = p->type, ty1 = ty;
+        ^
+lcc/src/decl.c:920:51: note: Shadowed declaration
+static Symbol dcllocal(int sclass, char *id, Type ty, Coordinate *pos) {
+                                                  ^
+lcc/src/decl.c:1001:9: note: Shadow variable
+   Type ty = p->type, ty1 = ty;
+        ^
+lcc/src/enode.c:19:6: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int n = 0;
+     ^
+lcc/src/expr.c:39:14: style: The scope of the variable 'stop' can be reduced. [variableScope]
+ static char stop[] = { IF, ID, '}', 0 };
+             ^
+lcc/src/expr.c:56:14: style: The scope of the variable 'stop' can be reduced. [variableScope]
+ static char stop[] = { IF, ID, 0 };
+             ^
+lcc/src/expr.c:690:105: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+     vcall(YYnull, voidtype, (file && *file ? pointer(idtree(mkstr(file)->u.c.loc)) : cnsttree(voidptype, NULL)), cnsttree(inttype, (long)lineno)  , NULL)),
+                                                                                                        ^
+lcc/src/expr.c:710:78: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  (file && *file ? pointer(idtree(mkstr(file)->u.c.loc)) : cnsttree(voidptype, NULL)), cnsttree(inttype, (long)lineno)  , NULL);
+                                                                             ^
+lcc/src/expr.c:358:12: style: Local variable 'p' shadows outer variable [shadowVariable]
+    Symbol p = install(token, &identifiers, level, FUNC);
+           ^
+lcc/src/expr.c:340:7: note: Shadowed declaration
+ Tree p;
+      ^
+lcc/src/expr.c:358:12: note: Shadow variable
+    Symbol p = install(token, &identifiers, level, FUNC);
+           ^
+lcc/src/expr.c:532:7: style: Local variable 'src' shadows outer variable [shadowVariable]
+ Type src, dst;
+      ^
+lcc/src/c.h:503:19: note: Shadowed declaration
+extern Coordinate src;
+                  ^
+lcc/src/expr.c:532:7: note: Shadow variable
+ Type src, dst;
+      ^
+lcc/src/gen.c:827:36: style: Same expression on both sides of '&&'. [duplicateExpression]
+ assert(p && p->sclass == REGISTER && p->sclass == REGISTER && p->x.regnode);
+                                   ^
+lcc/src/gen.c:661:6: style: The scope of the variable 'bestdist' can be reduced. [variableScope]
+ int bestdist = -1, i;
+     ^
+lcc/src/gen.c:661:21: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int bestdist = -1, i;
+                    ^
+lcc/src/gen.c:789:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+lcc/src/gen.c:387:9: style: Local variable 'src' shadows outer variable [shadowVariable]
+ Symbol src = q->x.kids[0]->syms[RX];
+        ^
+lcc/src/c.h:503:19: note: Shadowed declaration
+extern Coordinate src;
+                  ^
+lcc/src/gen.c:387:9: note: Shadow variable
+ Symbol src = q->x.kids[0]->syms[RX];
+        ^
+lcc/src/gen.c:633:13: style: Local variable 'r' shadows outer variable [shadowVariable]
+     Symbol r = p->x.kids[i]->syms[RX];
+            ^
+lcc/src/gen.c:630:11: note: Shadowed declaration
+   Symbol r;
+          ^
+lcc/src/gen.c:633:13: note: Shadow variable
+     Symbol r = p->x.kids[i]->syms[RX];
+            ^
+lcc/src/init.c:198:7: style: The scope of the variable 'e' can be reduced. [variableScope]
+ Tree e;
+      ^
+lcc/src/init.c:222:15: style: Local variable 'follow' shadows outer variable [shadowVariable]
+  static char follow[] = { CHAR, STATIC, 0 };
+              ^
+lcc/src/init.c:200:14: note: Shadowed declaration
+ static char follow[] = { IF, CHAR, STATIC, 0 };
+             ^
+lcc/src/init.c:222:15: note: Shadow variable
+  static char follow[] = { CHAR, STATIC, 0 };
+              ^
+lcc/src/init.c:185:22: style: Modulo of one is always equal to zero [moduloofone]
+   (*IR->space)(a - n%a);
+                     ^
+lcc/src/lex.c:819:8: style: Local variable 'c' shadows outer argument [shadowArgument]
+   int c;
+       ^
+lcc/src/lex.c:813:40: note: Shadowed declaration
+static void *scon(int q, void *put(int c, void *cl), void *cl) {
+                                       ^
+lcc/src/lex.c:819:8: note: Shadow variable
+   int c;
+       ^
+lcc/src/lex.c:363:20: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+    tval.u.c.v.i = extend(cbuf[0], chartype);
+                   ^
+lcc/src/list.c:37:33: style:inconclusive: Function 'ltov' argument 2 names different: declaration 'a' definition 'arena'. [funcArgNamesDifferent]
+void *ltov(List *list, unsigned arena) {
+                                ^
+lcc/src/c.h:633:41: note: Function 'ltov' argument 2 names different: declaration 'a' definition 'arena'.
+extern void *ltov (List *list, unsigned a);
+                                        ^
+lcc/src/list.c:37:33: note: Function 'ltov' argument 2 names different: declaration 'a' definition 'arena'.
+void *ltov(List *list, unsigned arena) {
+                                ^
+lcc/src/list.c:39:9: style: Local variable 'array' shadows outer function [shadowFunction]
+ void **array = newarray(length(*list) + 1, sizeof array[0], arena);
+        ^
+lcc/src/c.h:711:13: note: Shadowed declaration
+extern Type array(Type, int, int);
+            ^
+lcc/src/list.c:39:9: note: Shadow variable
+ void **array = newarray(length(*list) + 1, sizeof array[0], arena);
+        ^
+lcc/src/main.c:25:9: style: The scope of the variable 'j' can be reduced. [variableScope]
+ int i, j;
+        ^
+lcc/src/main.c:61:14: style: Local variable 'src' shadows outer variable [shadowVariable]
+  Coordinate src;
+             ^
+lcc/src/c.h:503:19: note: Shadowed declaration
+extern Coordinate src;
+                  ^
+lcc/src/main.c:61:14: note: Shadow variable
+  Coordinate src;
+             ^
+lcc/src/output.c:103:20: style: Local variable 't' shadows outer variable [shadowVariable]
+   case 'k': { int t = va_arg(ap, int);
+                   ^
+lcc/src/c.h:500:12: note: Shadowed declaration
+extern int t;
+           ^
+lcc/src/output.c:103:20: note: Shadow variable
+   case 'k': { int t = va_arg(ap, int);
+                   ^
+lcc/src/prof.c:199:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+lcc/src/prof.c:77:80: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ walk(vcall(prologue, voidtype, pointer(idtree(afunc)), pointer(idtree(yylink)), NULL), 0, 0);
+                                                                               ^
+lcc/src/prof.c:89:55: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ walk(vcall(epilogue, voidtype, pointer(idtree(afunc)), NULL), 0, 0);
+                                                      ^
+lcc/src/prof.c:38:7: style: Local variable 't' shadows outer variable [shadowVariable]
+ Tree t = *e;
+      ^
+lcc/src/c.h:500:12: note: Shadowed declaration
+extern int t;
+           ^
+lcc/src/prof.c:38:7: note: Shadow variable
+ Tree t = *e;
+      ^
+lcc/src/prof.c:135:7: style: Local variable 't' shadows outer variable [shadowVariable]
+ Tree t;
+      ^
+lcc/src/c.h:500:12: note: Shadowed declaration
+extern int t;
+           ^
+lcc/src/prof.c:135:7: note: Shadow variable
+ Tree t;
+      ^
+lcc/src/prof.c:14:17: style: struct member 'func::callers' is never used. [unusedStructMember]
+ struct caller *callers;
+                ^
+lcc/src/prof.c:44:10: style: Variable 'u.le.x' is assigned a value that is never used. [unreadVariable]
+  u.le.x = cp->x;
+         ^
+lcc/src/prof.c:45:10: style: Variable 'u.le.y' is assigned a value that is never used. [unreadVariable]
+  u.le.y = cp->y;
+         ^
+lcc/src/prof.c:47:10: style: Variable 'u.be.x' is assigned a value that is never used. [unreadVariable]
+  u.be.x = cp->x;
+         ^
+lcc/src/prof.c:48:10: style: Variable 'u.be.y' is assigned a value that is never used. [unreadVariable]
+  u.be.y = cp->y;
+         ^
+lcc/src/prof.c:120:10: style: Variable 'u.le.x' is assigned a value that is never used. [unreadVariable]
+  u.le.x = f->u.f.pt.x;
+         ^
+lcc/src/prof.c:121:10: style: Variable 'u.le.y' is assigned a value that is never used. [unreadVariable]
+  u.le.y = f->u.f.pt.y;
+         ^
+lcc/src/prof.c:122:14: style: Variable 'u.le.index' is assigned a value that is never used. [unreadVariable]
+  u.le.index = bbfile(f->u.f.pt.file);
+             ^
+lcc/src/prof.c:124:10: style: Variable 'u.be.x' is assigned a value that is never used. [unreadVariable]
+  u.be.x = f->u.f.pt.x;
+         ^
+lcc/src/prof.c:125:10: style: Variable 'u.be.y' is assigned a value that is never used. [unreadVariable]
+  u.be.y = f->u.f.pt.y;
+         ^
+lcc/src/prof.c:126:14: style: Variable 'u.be.index' is assigned a value that is never used. [unreadVariable]
+  u.be.index = bbfile(f->u.f.pt.file);
+             ^
+lcc/src/profio.c:62:57: style: Same expression on both sides of '||'. [duplicateExpression]
+   || strcmp(q->file, (*r)->file) > 0 || q->y > (*r)->y || q->y > (*r)->y); r = &(*r)->link)
+                                                        ^
+lcc/src/profio.c:181:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int c, n = 0;
+        ^
+lcc/src/profio.c:259:6: style: The scope of the variable 'more' can be reduced. [variableScope]
+ int more;
+     ^
+lcc/src/profio.c:208:25: style: Local variable 'npoints' shadows outer variable [shadowVariable]
+ int i, nfiles, nfuncs, npoints;
+                        ^
+lcc/src/c.h:512:12: note: Shadowed declaration
+extern int npoints;
+           ^
+lcc/src/profio.c:208:25: note: Shadow variable
+ int i, nfiles, nfuncs, npoints;
+                        ^
+lcc/src/profio.c:232:16: style: Local variable 'file' shadows outer variable [shadowVariable]
+  char *name, *file;
+               ^
+lcc/src/c.h:497:14: note: Shadowed declaration
+extern char *file;
+             ^
+lcc/src/profio.c:232:16: note: Shadow variable
+  char *name, *file;
+               ^
+lcc/src/simp.c:579:6: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int n;
+     ^
+lcc/src/simp.c:55:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond = x == 0 || y == 0
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:55:6: note: Shadow variable
+ int cond = x == 0 || y == 0
+     ^
+lcc/src/simp.c:70:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond = x == 0 || y == 0
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:70:6: note: Shadow variable
+ int cond = x == 0 || y == 0
+     ^
+lcc/src/simp.c:109:8: style: Local variable 'cp' shadows outer variable [shadowVariable]
+  Code cp;
+       ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/simp.c:109:8: note: Shadow variable
+  Code cp;
+       ^
+lcc/src/simp.c:123:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond = y != 0 && !(x == min && y == -1);
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:123:6: note: Shadow variable
+ int cond = y != 0 && !(x == min && y == -1);
+     ^
+lcc/src/simp.c:134:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond;
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:134:6: note: Shadow variable
+ int cond;
+     ^
+lcc/src/simp.c:149:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond = (x > -1 && x <= 1) || (y > -1 && y <= 1)
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:149:6: note: Shadow variable
+ int cond = (x > -1 && x <= 1) || (y > -1 && y <= 1)
+     ^
+lcc/src/simp.c:164:6: style: Local variable 'cond' shadows outer function [shadowFunction]
+ int cond = (x >= -1 && x <= 1) || (y >= -1 && y <= 1)
+     ^
+lcc/src/c.h:599:13: note: Shadowed declaration
+extern Tree cond(Tree);
+            ^
+lcc/src/simp.c:164:6: note: Shadow variable
+ int cond = (x >= -1 && x <= 1) || (y >= -1 && y <= 1)
+     ^
+lcc/src/simp.c:531:10: style: Local variable 'n' shadows outer variable [shadowVariable]
+    long n = l->u.v.i>>r->u.v.i;
+         ^
+lcc/src/simp.c:206:6: note: Shadowed declaration
+ int n;
+     ^
+lcc/src/simp.c:531:10: note: Shadow variable
+    long n = l->u.v.i>>r->u.v.i;
+         ^
+lcc/src/simp.c:222:4: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+   xcvtcnst(I,l->u.v.i,ty,i,(long)extend(l->u.v.i,ty));
+   ^
+lcc/src/simp.c:229:32: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+     return cnsttree(ty, (long)extend(l->u.v.u,ty));
+                               ^
+lcc/src/simp.c:356:4: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+   ufoldcnst(I,cnsttree(ty, (long)extend((~l->u.v.i)&ones(8*ty->size), ty)));
+   ^
+lcc/src/stmt.c:26:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/stmt.c:26:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/stmt.c:42:8: style: Local variable 'cp' shadows outer variable [shadowVariable]
+  Code cp;
+       ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/stmt.c:42:8: note: Shadow variable
+  Code cp;
+       ^
+lcc/src/stmt.c:58:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp = code(Defpoint);
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/stmt.c:58:7: note: Shadow variable
+ Code cp = code(Defpoint);
+      ^
+lcc/src/stmt.c:440:10: style: Local variable 'table' shadows outer function [shadowFunction]
+  Symbol table = genident(STATIC,
+         ^
+lcc/src/c.h:689:14: note: Shadowed declaration
+extern Table table(Table, int);
+             ^
+lcc/src/stmt.c:440:10: note: Shadow variable
+  Symbol table = genident(STATIC,
+         ^
+lcc/src/stmt.c:534:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/stmt.c:534:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/stmt.c:565:7: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Code cp;
+      ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/stmt.c:565:7: note: Shadow variable
+ Code cp;
+      ^
+lcc/src/stmt.c:128:26: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+              p->u.v.i = extend(p->u.v.u, p->type);
+                         ^
+lcc/src/sym.c:54:7: style: Variable 'src' is reassigned a value before the old one has been used. [redundantAssignment]
+  src = sav;
+      ^
+lcc/src/sym.c:51:8: note: src is assigned
+   src = p->src;
+       ^
+lcc/src/sym.c:54:7: note: src is overwritten
+  src = sav;
+      ^
+lcc/src/sym.c:245:14: style: Local variable 'cp' shadows outer variable [shadowVariable]
+ Coordinate *cp;
+             ^
+lcc/src/c.h:494:23: note: Shadowed declaration
+extern unsigned char *cp;
+                      ^
+lcc/src/sym.c:245:14: note: Shadow variable
+ Coordinate *cp;
+             ^
+lcc/src/symbolic.c:380:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+lcc/src/symbolic.c:358:10: style: Local variable 't' shadows outer variable [shadowVariable]
+  time_t t;
+         ^
+lcc/src/c.h:500:12: note: Shadowed declaration
+extern int t;
+           ^
+lcc/src/symbolic.c:358:10: note: Shadow variable
+  time_t t;
+         ^
+lcc/src/trace.c:163:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+lcc/src/tree.c:31:8: style: Variable 'where' is reassigned a value before the old one has been used. [redundantAssignment]
+ where = save;
+       ^
+lcc/src/tree.c:29:8: note: where is assigned
+ where = a;
+       ^
+lcc/src/tree.c:31:8: note: where is overwritten
+ where = save;
+       ^
+lcc/src/types.c:611:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+  int i;
+      ^
+lcc/src/types.c:607:34: style:inconclusive: Function 'printproto' argument 2 names different: declaration 'args' definition 'callee'. [funcArgNamesDifferent]
+void printproto(Symbol p, Symbol callee[]) {
+                                 ^
+lcc/src/c.h:708:41: note: Function 'printproto' argument 2 names different: declaration 'args' definition 'callee'.
+extern void printproto(Symbol p, Symbol args[]);
+                                        ^
+lcc/src/types.c:607:34: note: Function 'printproto' argument 2 names different: declaration 'args' definition 'callee'.
+void printproto(Symbol p, Symbol callee[]) {
+                                 ^
+lcc/src/types.c:691:33: style:inconclusive: Function 'typestring' argument 2 names different: declaration 'id' definition 'str'. [funcArgNamesDifferent]
+char *typestring(Type ty, char *str) {
+                                ^
+lcc/src/c.h:709:40: note: Function 'typestring' argument 2 names different: declaration 'id' definition 'str'.
+extern char *typestring(Type ty, char *id);
+                                       ^
+lcc/src/types.c:691:33: note: Function 'typestring' argument 2 names different: declaration 'id' definition 'str'.
+char *typestring(Type ty, char *str) {
+                                ^
+lcc/src/types.c:418:11: style: Local variable 'ty' shadows outer variable [shadowVariable]
+     Type ty = compose(unqual(*p1), unqual(*p2));
+          ^
+lcc/src/types.c:409:10: note: Shadowed declaration
+    Type ty   = compose(ty1->type, ty2->type);
+         ^
+lcc/src/types.c:418:11: note: Shadow variable
+     Type ty = compose(unqual(*p1), unqual(*p2));
+          ^
+q3asm/cmdlib.c:244:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+        int i;
+            ^
+q3asm/cmdlib.c:347:11: style: The scope of the variable 'archivename' can be reduced. [variableScope]
+    char  archivename[1024 * 2];
+          ^
+q3asm/cmdlib.c:531:13: style: The scope of the variable 'c2' can be reduced. [variableScope]
+    int c1, c2;
+            ^
+q3asm/cmdlib.c:560:20: style:inconclusive: Function 'strupr' argument 1 names different: declaration 'in' definition 'start'. [funcArgNamesDifferent]
+char* strupr(char* start)
+                   ^
+q3asm/cmdlib.h:70:20: note: Function 'strupr' argument 1 names different: declaration 'in' definition 'start'.
+char* strupr(char* in);
+                   ^
+q3asm/cmdlib.c:560:20: note: Function 'strupr' argument 1 names different: declaration 'in' definition 'start'.
+char* strupr(char* start)
+                   ^
+q3asm/cmdlib.c:572:22: style:inconclusive: Function 'strlower' argument 1 names different: declaration 'in' definition 'start'. [funcArgNamesDifferent]
+char* strlower(char* start)
+                     ^
+q3asm/cmdlib.h:71:22: note: Function 'strlower' argument 1 names different: declaration 'in' definition 'start'.
+char* strlower(char* in);
+                     ^
+q3asm/cmdlib.c:572:22: note: Function 'strlower' argument 1 names different: declaration 'in' definition 'start'.
+char* strlower(char* start)
+                     ^
+q3asm/cmdlib.c:1078:17: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (path[1] == ':')
+                ^
+q3asm/cmdlib.c:1071:17: note: First condition
+    if (path[1] == ':')
+                ^
+q3asm/cmdlib.c:1078:17: note: Second condition
+    if (path[1] == ':')
+                ^
+q3asm/q3asm.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 42 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+q3asm/q3asm.c:778:8: error: Array 'sym[1024]' accessed at index 1024, which is out of bounds. [arrayIndexOutOfBounds]
+    sym[i] = 0;
+       ^
+q3asm/q3asm.c:769:5: note: After for loop, i has value 1024
+    for (i = ((token[0] == '-') ? 1 : 0); i < MAX_LINE_LENGTH; i++)
+    ^
+q3asm/q3asm.c:778:8: note: Array index out of bounds
+    sym[i] = 0;
+       ^
+q3asm/q3asm.c:1496:28: warning: The address of local variable 'header' might be accessed at non-zero index. [objectIndex]
+            ((int*)&header)[i] = LittleLong(((int*)&header)[i]);
+                           ^
+q3asm/q3asm.c:1496:20: note: Address of variable taken here.
+            ((int*)&header)[i] = LittleLong(((int*)&header)[i]);
+                   ^
+q3asm/q3asm.c:1496:28: note: The address of local variable 'header' might be accessed at non-zero index.
+            ((int*)&header)[i] = LittleLong(((int*)&header)[i]);
+                           ^
+q3asm/q3asm.c:343:18: style: The scope of the variable 's' can be reduced. [variableScope]
+    symbol_t*    s;
+                 ^
+q3asm/q3asm.c:613:18: style: The scope of the variable 's' can be reduced. [variableScope]
+    symbol_t*    s;
+                 ^
+q3asm/q3asm.c:938:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int v;
+        ^
+q3asm/q3asm.c:956:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int v;
+        ^
+q3asm/q3asm.c:973:10: style: The scope of the variable 'name' can be reduced. [variableScope]
+    char name[1024];
+         ^
+q3asm/q3asm.c:1024:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int v;
+        ^
+q3asm/q3asm.c:1127:10: style: The scope of the variable 'name' can be reduced. [variableScope]
+    char name[1024];
+         ^
+q3asm/q3asm.c:1142:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int v;
+        ^
+q3asm/q3asm.c:1156:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int v;
+        ^
+q3asm/q3asm.c:1169:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, v, v2;
+        ^
+q3asm/q3asm.c:1169:12: style: The scope of the variable 'v' can be reduced. [variableScope]
+    int i, v, v2;
+           ^
+q3asm/q3asm.c:1169:15: style: The scope of the variable 'v2' can be reduced. [variableScope]
+    int i, v, v2;
+              ^
+q3asm/q3asm.c:1236:18: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int          i;
+                 ^
+q3asm/q3asm.c:1261:17: style: The scope of the variable 'expression' can be reduced. [variableScope]
+            int expression;
+                ^
+src/vm/vm.c:691:28: error: The address of local variable 'h' is accessed at non-zero index. [objectIndex]
+    return (b[0] << 0) | (b[1] << 8) | (b[2] << 16) | (b[3] << 24);
+                           ^
+src/vm/vm.c:461:9: note: Address of variable taken here.
+    if (LittleLong(header.h->vmMagic) == VM_MAGIC)
+        ^
+src/vm/vm.c:461:9: note: Calling function 'LittleEndianToHost', 1st argument '(const uint8_t*)&(header.h->vmMagic)' value is lifetime=h
+    if (LittleLong(header.h->vmMagic) == VM_MAGIC)
+        ^
+src/vm/vm.c:691:28: note: The address of local variable 'h' is accessed at non-zero index.
+    return (b[0] << 0) | (b[1] << 8) | (b[2] << 16) | (b[3] << 24);
+                           ^
+src/vm/vm.c:691:28: error: The address of local variable 'h' is accessed at non-zero index. [objectIndex]
+    return (b[0] << 0) | (b[1] << 8) | (b[2] << 16) | (b[3] << 24);
+                           ^
+src/vm/vm.c:487:30: note: Address of variable taken here.
+                   vm->name, LittleLong(header.h->vmMagic), VM_MAGIC);
+                             ^
+src/vm/vm.c:487:30: note: Calling function 'LittleEndianToHost', 1st argument '(const uint8_t*)&(header.h->vmMagic)' value is lifetime=h
+                   vm->name, LittleLong(header.h->vmMagic), VM_MAGIC);
+                             ^
+src/vm/vm.c:691:28: note: The address of local variable 'h' is accessed at non-zero index.
+    return (b[0] << 0) | (b[1] << 8) | (b[2] << 16) | (b[3] << 24);
+                           ^
+src/vm/vm.c:410:9: style: Condition '!vm->compiled' is always true [knownConditionTrueFalse]
+    if (!vm->compiled)
+        ^
+src/vm/vm.c:409:20: note: Assignment 'vm->compiled=0', assigned value is 0
+    vm->compiled = 0; /* no JIT */
+                   ^
+src/vm/vm.c:410:9: note: Condition '!vm->compiled' is always true
+    if (!vm->compiled)
+        ^
+src/vm/vm.c:1351:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)(opStackOfs + 1)] ==
+                 ^
+src/vm/vm.c:1352:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 2)])
+                 ^
+src/vm/vm.c:1365:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)(opStackOfs + 1)] !=
+                 ^
+src/vm/vm.c:1366:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 2)])
+                 ^
+src/vm/vm.c:1379:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)(opStackOfs + 1)] <
+                 ^
+src/vm/vm.c:1380:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 2)])
+                 ^
+src/vm/vm.c:1393:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)((uint8_t)(opStackOfs + 1))] <=
+                 ^
+src/vm/vm.c:1394:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)((uint8_t)(opStackOfs + 2))])
+                 ^
+src/vm/vm.c:1407:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)(opStackOfs + 1)] >
+                 ^
+src/vm/vm.c:1408:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 2)])
+                 ^
+src/vm/vm.c:1421:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            if (((float*)opStack)[(uint8_t)(opStackOfs + 1)] >=
+                 ^
+src/vm/vm.c:1422:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 2)])
+                 ^
+src/vm/vm.c:1498:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] = -((float*)opStack)[opStackOfs];
+             ^
+src/vm/vm.c:1502:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] =
+             ^
+src/vm/vm.c:1503:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[opStackOfs] +
+                 ^
+src/vm/vm.c:1504:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 1)];
+                 ^
+src/vm/vm.c:1508:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] =
+             ^
+src/vm/vm.c:1509:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[opStackOfs] -
+                 ^
+src/vm/vm.c:1510:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 1)];
+                 ^
+src/vm/vm.c:1514:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] =
+             ^
+src/vm/vm.c:1515:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[opStackOfs] /
+                 ^
+src/vm/vm.c:1516:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 1)];
+                 ^
+src/vm/vm.c:1520:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] =
+             ^
+src/vm/vm.c:1521:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[opStackOfs] *
+                 ^
+src/vm/vm.c:1522:18: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                ((float*)opStack)[(uint8_t)(opStackOfs + 1)];
+                 ^
+src/vm/vm.c:1525:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            ((float*)opStack)[opStackOfs] = (float)opStack[opStackOfs];
+             ^
+src/vm/vm.c:1528:35: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            opStack[opStackOfs] = Q_ftol(((float*)opStack)[opStackOfs]);
+                                  ^
+src/vm/vm.c:364:37: style:inconclusive: Function 'VM_Create' argument 2 names different: declaration 'module' definition 'name'. [funcArgNamesDifferent]
+int VM_Create(vm_t* vm, const char* name, const uint8_t* bytecode, int length,
+                                    ^
+src/vm/vm.h:199:37: note: Function 'VM_Create' argument 2 names different: declaration 'module' definition 'name'.
+int VM_Create(vm_t* vm, const char* module, const uint8_t* bytecode, int length,
+                                    ^
+src/vm/vm.c:364:37: note: Function 'VM_Create' argument 2 names different: declaration 'module' definition 'name'.
+int VM_Create(vm_t* vm, const char* name, const uint8_t* bytecode, int length,
+                                    ^
+src/vm/vm.c:626:18: style: union member 'Anonymous1::ui' is never used. [unusedStructMember]
+        uint32_t ui; /**< unsigned int32 part */
+                 ^
+src/vm/vm.c:637:18: style: union member 'Anonymous2::ui' is never used. [unusedStructMember]
+        uint32_t ui; /**< unsigned int32 part */
+                 ^
+src/vm/vm.c:1839:27: style: The scope of the variable 'token' can be reduced. [variableScope]
+    char *       text_p, *token;
+                          ^
+src/vm/vm.c:1846:18: style: The scope of the variable 'segment' can be reduced. [variableScope]
+    int          segment;
+                 ^
+src/vm/vm.c:1960:27: style: The scope of the variable 'sym' can be reduced. [variableScope]
+    vmSymbol_t **sorted, *sym;
+                          ^
+src/vm/vm.c:1656:47: style:inconclusive: Function 'loadImage' argument 2 names different: declaration 'imageSize' definition 'size'. [funcArgNamesDifferent]
+uint8_t* loadImage(const char* filepath, int* size)
+                                              ^
+src/vm/vm.c:345:54: note: Function 'loadImage' argument 2 names different: declaration 'imageSize' definition 'size'.
+static uint8_t* loadImage(const char* filepath, int* imageSize);
+                                                     ^
+src/vm/vm.c:1656:47: note: Function 'loadImage' argument 2 names different: declaration 'imageSize' definition 'size'.
+uint8_t* loadImage(const char* filepath, int* size)
+                                              ^
+src/vm/vm.c:929:24: error: syntax error [syntaxError]
+        &&goto_OP_UNDEF,  &&goto_OP_IGNORE,     &&goto_OP_BREAK,
+                       ^
+test/bg_lib.c:889:31: portability: Casting between signed int * and double * which have an incompatible binary data representation. [invalidPointerCast]
+            AddFloat(&buf_p, *(double*)arg, width, prec);
+                              ^
+test/bg_lib.c:944:14: portability: Casting between signed int * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            *(float*)*arg = _atof(&buffer);
+             ^
+test/bg_lib.c:510:9: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int c;
+        ^
+test/bg_lib.c:560:17: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int         c;
+                ^
+test/g_main.c:97:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (doStupidStuff)
+        ^
+test/g_main.c:91:9: note: First condition
+    if (doStupidStuff)
+        ^
+test/g_main.c:97:9: note: Second condition
+    if (doStupidStuff)
+        ^
+test/g_main.c:341:16: error: Buffer is accessed out of bounds: mem1 [bufferAccessOutOfBounds]
+        memcpy(mem1, mem2, 1000000); /* try to escape the sandbox */
+               ^
+test/g_main.c:341:22: error: Buffer is accessed out of bounds: mem2 [bufferAccessOutOfBounds]
+        memcpy(mem1, mem2, 1000000); /* try to escape the sandbox */
+                     ^
+test/q3vm_test/q3vm_test.c:39:63: warning: Possible null pointer dereference: filepath [nullPointer]
+    fprintf(stderr, "Injecting wrong OP code %s at %i: %i\n", filepath, offset,
+                                                              ^
+test/q3vm_test/q3vm_test.c:153:16: note: Calling function 'testInject', 1st argument 'NULL' value is 0
+    testInject(NULL, 0, 0);
+               ^
+test/q3vm_test/q3vm_test.c:33:9: note: Assuming condition is Assuming condition is false
+    if (!image)
+        ^
+test/q3vm_test/q3vm_test.c:39:63: note: Null pointer dereference
+    fprintf(stderr, "Injecting wrong OP code %s at %i: %i\n", filepath, offset,
+                                                              ^
+lcc/lburg/lburg.c:433:14: warning: Null pointer dereference: t [ctunullpointer]
+ Nonterm p = t->op;
+             ^
+lcc/lburg/lburg.c:378:45: note: Assuming that condition 'r->pattern->left' is not redundant
+
+                                            ^
+lcc/lburg/lburg.c:382:12: note: Calling function emitcost, 1st argument is null
+   emitcost(r->pattern->left, "LEFT_CHILD(a)");
+           ^
+lcc/lburg/lburg.c:433:14: note: Dereferencing argument t that is null
+ Nonterm p = t->op;
+             ^
+q3asm/cmdlib.c:1041:0: style: The function 'CRC_Init' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:1046:0: style: The function 'CRC_ProcessByte' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:1051:0: style: The function 'CRC_Value' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:600:0: style: The function 'CheckParm' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:816:0: style: The function 'DefaultPath' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:302:0: style: The function 'ExpandArg' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:330:0: style: The function 'ExpandGamePath' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:344:0: style: The function 'ExpandPathAndArchive' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:100:0: style: The function 'ExpandWildcards' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:875:0: style: The function 'ExtractFileBase' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:894:0: style: The function 'ExtractFileExtension' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:691:0: style: The function 'FileExists' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:439:0: style: The function 'FileTime' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:988:0: style: The function 'FloatSwap' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:732:0: style: The function 'LoadFileBlock' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:944:0: style: The function 'ParseNum' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:225:0: style: The function 'SetQdirFromPath' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:961:0: style: The function 'ShortSwap' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:827:0: style: The function 'StripFilename' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:762:0: style: The function 'TryLoadFile' is never used. [unusedFunction]
+
+^
+src/vm/vm.c:621:0: style: The function 'VM_IntToFloat' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:572:0: style: The function 'askregvar' is never used. [unusedFunction]
+
+^
+example/bg_lib.c:347:0: style: The function 'atof' is never used. [unusedFunction]
+
+^
+example/bg_lib.c:616:0: style: The function 'fabs' is never used. [unusedFunction]
+
+^
+lcc/src/types.c:497:0: style: The function 'fieldlist' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:820:0: style: The function 'getregnum' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:219:0: style: The function 'mayrecalc' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:116:0: style: The function 'mkactual' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:98:0: style: The function 'mkauto' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:79:0: style: The function 'mkreg' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:90:0: style: The function 'mkwildcard' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:382:0: style: The function 'move' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:525:0: style: The function 'notarget' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:165:0: style: The function 'parseflags' is never used. [unusedFunction]
+
+^
+lcc/src/tree.c:192:0: style: The function 'printtree' is never used. [unusedFunction]
+
+^
+lcc/src/types.c:684:0: style: The function 'printtype' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:253:0: style: The function 'range' is never used. [unusedFunction]
+
+^
+lcc/src/gen.c:826:0: style: The function 'regloc' is never used. [unusedFunction]
+
+^
+example/bg_lib.c:336:0: style: The function 'srand' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:572:0: style: The function 'strlower' is never used. [unusedFunction]
+
+^
+q3asm/cmdlib.c:560:0: style: The function 'strupr' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
